@@ -53,7 +53,7 @@ class MetricsTests(unittest.TestCase):
     def test_island_and_runs(self):
         grid = np.array([[0, 0, 0], [0, 1, 0], [0, 0, 0]])
         self.assertEqual(metrics.count_islands(grid), 1)
-        self.assertAlmostEqual(metrics.mean_run_length(grid), 9 / 7)
+        self.assertAlmostEqual(metrics.mean_run_length(grid), 9 / 5)  # runs per row: 1 + 3 + 1 = 5
 
     def test_adjacent_same_share(self):
         grid = np.array([[0, 1], [0, 1]])
