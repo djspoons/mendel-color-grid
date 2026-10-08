@@ -1,0 +1,5 @@
+version: 1
+service: app
+test_command: python -m pytest -q tests
+results_command: python run_picture_method.py
+comparable_output: docs/picture-method-results.md
