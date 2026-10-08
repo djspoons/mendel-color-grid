@@ -28,7 +28,7 @@ def _pct(x):
     return f"{100 * x:.1f}%"
 
 
-def _section_inputs(loaded, crops):
+def _section_inputs(loaded, crops, notes, boost):
     ok = [item for item in loaded if item.ok]
     rows = []
     for item in loaded:
@@ -44,6 +44,9 @@ def _section_inputs(loaded, crops):
         "## What was read",
         "",
         f"- Images read: {len(ok)} of 11 expected.",
+        *["- " + n for n in notes],
+        "- " + ("Every image was read and no fallback was taken." if not notes else "Anything not listed above was read normally."),
+        f"- Contrast/saturation boost: {boost.describe()}.",
         "- Densities (columns x rows): " + ", ".join(density_label(d) for d in DENSITIES) + ".",
         "- Palette: the classic Crayola 24-count box; hex values below are the ones this run used. "
         "Cell numbers are the 1-24 positions in this list.",
@@ -257,13 +260,10 @@ def build_report(loaded, results, crops, sheets, boost):
                 notes.append(f"FALLBACK: {item.name}: {note}")
     head = [f"# Picture method results: {METHOD}", "",
             f"Generated {datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M UTC} by `python run_picture_method.py`.",
-            "Method: average each cell's pixels, then snap that average to the nearest of the 24 Crayola crayons in CIE Lab.", "",
-            "## Run notes", ""]
-    head += ["- " + n for n in notes] if notes else ["- Every image was read and no fallback was taken."]
-    head += [f"- Contrast/saturation boost: {boost.describe()}.", ""]
+            "Method: average each cell's pixels, then snap that average to the nearest of the 24 Crayola crayons in CIE Lab.", ""]
     if not ok:
-        return "\n".join(head + ["", _section_inputs(loaded, crops)]) + "\n"
-    parts = [_section_inputs(loaded, crops), _section_method(boost), _section_previews(loaded, results, sheets),
+        return "\n".join(head + [_section_inputs(loaded, crops, notes, boost)]) + "\n"
+    parts = [_section_inputs(loaded, crops, notes, boost), _section_method(boost), _section_previews(loaded, results, sheets),
              _section_recognizability(results), _section_palette_usage(results), _section_privacy(results),
              _section_practicality(results), _section_runtime(results), _section_verdict(results)]
     return "\n".join(head) + "\n" + "\n\n".join(parts) + "\n"
