@@ -1,0 +1,5 @@
+version: 1
+service: app
+test_command: python -m unittest discover -s tests -v
+results_command: python docs/team-shot-plan/survey.py
+comparable_output: docs/test-photo-set-survey.md

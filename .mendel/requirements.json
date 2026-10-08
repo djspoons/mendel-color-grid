@@ -1,0 +1,20 @@
+{
+  "requirements": [
+    {
+      "kind": "secret",
+      "name": "OPENVERSE_CLIENT_ID",
+      "description": "Openverse API OAuth client id; only lifts the anonymous rate limit for the fallback survey",
+      "console_url": "https://api.openverse.org/v1/#tag/auth/operation/register",
+      "optional": true,
+      "needed_by": ["results"]
+    },
+    {
+      "kind": "secret",
+      "name": "OPENVERSE_CLIENT_SECRET",
+      "description": "Openverse API OAuth client secret paired with OPENVERSE_CLIENT_ID",
+      "console_url": "https://api.openverse.org/v1/#tag/auth/operation/register",
+      "optional": true,
+      "needed_by": ["results"]
+    }
+  ]
+}
