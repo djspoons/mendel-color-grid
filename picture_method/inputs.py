@@ -121,16 +121,14 @@ def load_commons(spec):
     url = config.COMMONS_FILEPATH.format(
         title=urllib.parse.quote(title.replace(" ", "_"), safe=""))
     loaded.source = f"Wikimedia Commons File:{title} (Special:FilePath, width=1600)"
-    if path.exists():
-        loaded.note = "reused file already in photos/"
-    else:
-        try:
-            data = _get_with_retry(url).content
-            Image.open(io.BytesIO(data)).verify()
-            path.write_bytes(data)
-        except Exception as exc:
-            loaded.missing_reason = f"could not fetch {url}: {exc}"
-            return loaded
+    # Always fetch fresh so the run reads exactly the pinned title, never a stale file.
+    try:
+        data = _get_with_retry(url).content
+        Image.open(io.BytesIO(data)).verify()
+        path.write_bytes(data)
+    except Exception as exc:
+        loaded.missing_reason = f"could not fetch {url}: {exc}"
+        return loaded
     loaded.path = path
     loaded.license = commons_license(title)
     loaded.image = Image.open(path).convert("RGB")
