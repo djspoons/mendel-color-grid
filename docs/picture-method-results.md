@@ -1,6 +1,6 @@
 # Picture method results: quantize then majority vote
 
-Generated 2026-10-08 20:11 UTC by `python run_picture_method.py`.
+Generated 2026-10-08 21:37 UTC by `python run_picture_method.py`.
 
 ## What was read
 
@@ -17,7 +17,7 @@ Generated 2026-10-08 20:11 UTC by `python run_picture_method.py`.
 | 07 | photos/07-migrant-mother.jpg | group | Wikimedia Commons File:Lange-MigrantMother02.jpg (Special:FilePath, width=1600) | Public domain | 1920x2496 | 6205x8066 | `e6657df96f6dadede759d88c6c3ebc14dc956633c246a3a1046a47ebf5c17afd` | `70c1b51a464f3f1c920225a90ae4869e89f93acb5d0d099b9e2dd9ce99191ca0` | landscape/wide source: crop removes the sides (3% of the width) |
 | 08 | photos/08-lunch-atop-skyscraper.jpg | group | Wikimedia Commons File:Lunch atop a Skyscraper.jpg (Special:FilePath, width=1600) | Public domain | 1920x1482 | 8192x6322 | `3a487894b9c1462dbe0813ffb1c82d8e0508b440337cee1a3ef34a683e559b1f` | `eddb8164b8fd169c27fd99edabf1a261dc7fcc08b7a8bc590fa7e04a9fce3628` | landscape/wide source: crop removes the sides (42% of the width) |
 | 09 | photos/09-golden-retriever.jpg | pet or animal | Wikimedia Commons File:Golden Retriever Dukedestiny01.jpg (Special:FilePath, width=1600) | Public domain | 1024x768 | 1024x768 | `7a7d156fcb6fe815670924619cf4bb2e310232a93e6b7fea64505d1dac486ec5` | `dd231c82158e6a7b72ac90a2ab1b60f75e233dcf66c13e33c2c0ae713d589157` | landscape/wide source: crop removes the sides (44% of the width) |
-| 10 | photos/10-hopetoun-falls.jpg | outdoor | Wikimedia Commons File:Hopetoun falls.jpg (Special:FilePath, width=1600) | CC BY-SA 3.0 | 1920x1280 | 3072x2048 | `afc9ddf298d06298520e981f5b7fb7d9c89a6de68e8bd8363091c59405cc7fcd` | `b957f5a0730ef41c95a4468d25a9ec4a8e5aafff854b8e00d9ad80320ffc5fcc` | landscape/wide source: crop removes the sides (50% of the width) |
+| 10 | photos/10-hopetoun-falls.jpg | outdoor | Wikimedia Commons File:Hopetoun falls.jpg (Special:FilePath, width=1600) | unknown (Commons metadata fetch failed: HTTPError: HTTP Error 429: Too Many Requests) | 1920x1280 | n/a | `afc9ddf298d06298520e981f5b7fb7d9c89a6de68e8bd8363091c59405cc7fcd` | `b957f5a0730ef41c95a4468d25a9ec4a8e5aafff854b8e00d9ad80320ffc5fcc` | landscape/wide source: crop removes the sides (50% of the width) |
 | 11 | photos/11-shibuya-crossing.jpg | cluttered | Wikimedia Commons File:Tokyo Shibuya Scramble Crossing 2018-10-09.jpg (Special:FilePath, width=1600) | CC BY-SA 2.0 | 1920x1280 | 5853x3902 | `615151cfc947a72008a1d8aa12ba606d437bcc5d656ff87305228e094f916edd` | `cf480e2aba1960b0592b343b3b969ecdfb49b815f7cf9ebed9e4e77d09bae0e8` | landscape/wide source: crop removes the sides (50% of the width) |
 
 Bundled images are re-encoded to JPEG (quality 95) when saved, so their file hash depends on the Pillow build; the decoded-RGB hash is of the library's original array and is the one to compare.
@@ -65,95 +65,95 @@ Previews and sheets are in `docs/picture-method/quantize-vote/`. Main results be
 
 ## Per image and density
 
-Original (3:4 crop), colored preview, blank numbered grid. Recognizability is a computed proxy (see next section).
+Original (3:4 crop) beside the colored preview (standalone preview PNGs sit in the same folder), and the blank numbered grid. Recognizability is a computed proxy (see next section).
 
 ### 01 astronaut (portrait)
 
-| density | original | preview | blank grid | runtime | recognizability |
-|---|---|---|---|---|---|
-| 24x32 | ![](picture-method/quantize-vote/01-astronaut_original.png) | ![](picture-method/quantize-vote/01-astronaut_24x32_preview.png) | ![](picture-method/quantize-vote/01-astronaut_24x32_blank.png) | 61 ms | recognizable |
-| 36x48 | ![](picture-method/quantize-vote/01-astronaut_original.png) | ![](picture-method/quantize-vote/01-astronaut_36x48_preview.png) | ![](picture-method/quantize-vote/01-astronaut_36x48_blank.png) | 104 ms | recognizable |
-| 48x64 | ![](picture-method/quantize-vote/01-astronaut_original.png) | ![](picture-method/quantize-vote/01-astronaut_48x64_preview.png) | ![](picture-method/quantize-vote/01-astronaut_48x64_blank.png) | 196 ms | recognizable |
+| density | original beside colored preview | blank grid | runtime | recognizability |
+|---|---|---|---|---|
+| 24x32 | ![](picture-method/quantize-vote/01-astronaut_24x32_side_by_side.png) | ![](picture-method/quantize-vote/01-astronaut_24x32_blank.png) | 101 ms | recognizable |
+| 36x48 | ![](picture-method/quantize-vote/01-astronaut_36x48_side_by_side.png) | ![](picture-method/quantize-vote/01-astronaut_36x48_blank.png) | 288 ms | recognizable |
+| 48x64 | ![](picture-method/quantize-vote/01-astronaut_48x64_side_by_side.png) | ![](picture-method/quantize-vote/01-astronaut_48x64_blank.png) | 549 ms | recognizable |
 
 ### 02 chelsea-cat (pet or animal)
 
-| density | original | preview | blank grid | runtime | recognizability |
-|---|---|---|---|---|---|
-| 24x32 | ![](picture-method/quantize-vote/02-chelsea-cat_original.png) | ![](picture-method/quantize-vote/02-chelsea-cat_24x32_preview.png) | ![](picture-method/quantize-vote/02-chelsea-cat_24x32_blank.png) | 45 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.72); only 5 crayons survive the vote; top 3 crayons fill 98% of cells (detail lost) |
-| 36x48 | ![](picture-method/quantize-vote/02-chelsea-cat_original.png) | ![](picture-method/quantize-vote/02-chelsea-cat_36x48_preview.png) | ![](picture-method/quantize-vote/02-chelsea-cat_36x48_blank.png) | 110 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.74); only 5 crayons survive the vote; top 3 crayons fill 98% of cells (detail lost) |
-| 48x64 | ![](picture-method/quantize-vote/02-chelsea-cat_original.png) | ![](picture-method/quantize-vote/02-chelsea-cat_48x64_preview.png) | ![](picture-method/quantize-vote/02-chelsea-cat_48x64_blank.png) | 185 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.76); only 5 crayons survive the vote; top 3 crayons fill 97% of cells (detail lost) |
+| density | original beside colored preview | blank grid | runtime | recognizability |
+|---|---|---|---|---|
+| 24x32 | ![](picture-method/quantize-vote/02-chelsea-cat_24x32_side_by_side.png) | ![](picture-method/quantize-vote/02-chelsea-cat_24x32_blank.png) | 71 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.72); only 5 crayons survive the vote; top 3 crayons fill 98% of cells (detail lost) |
+| 36x48 | ![](picture-method/quantize-vote/02-chelsea-cat_36x48_side_by_side.png) | ![](picture-method/quantize-vote/02-chelsea-cat_36x48_blank.png) | 243 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.74); only 5 crayons survive the vote; top 3 crayons fill 98% of cells (detail lost) |
+| 48x64 | ![](picture-method/quantize-vote/02-chelsea-cat_48x64_side_by_side.png) | ![](picture-method/quantize-vote/02-chelsea-cat_48x64_blank.png) | 540 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.76); only 5 crayons survive the vote; top 3 crayons fill 97% of cells (detail lost) |
 
 ### 03 coffee (indoor)
 
-| density | original | preview | blank grid | runtime | recognizability |
-|---|---|---|---|---|---|
-| 24x32 | ![](picture-method/quantize-vote/03-coffee_original.png) | ![](picture-method/quantize-vote/03-coffee_24x32_preview.png) | ![](picture-method/quantize-vote/03-coffee_24x32_blank.png) | 44 ms | recognizable |
-| 36x48 | ![](picture-method/quantize-vote/03-coffee_original.png) | ![](picture-method/quantize-vote/03-coffee_36x48_preview.png) | ![](picture-method/quantize-vote/03-coffee_36x48_blank.png) | 102 ms | recognizable |
-| 48x64 | ![](picture-method/quantize-vote/03-coffee_original.png) | ![](picture-method/quantize-vote/03-coffee_48x64_preview.png) | ![](picture-method/quantize-vote/03-coffee_48x64_blank.png) | 190 ms | recognizable |
+| density | original beside colored preview | blank grid | runtime | recognizability |
+|---|---|---|---|---|
+| 24x32 | ![](picture-method/quantize-vote/03-coffee_24x32_side_by_side.png) | ![](picture-method/quantize-vote/03-coffee_24x32_blank.png) | 94 ms | recognizable |
+| 36x48 | ![](picture-method/quantize-vote/03-coffee_36x48_side_by_side.png) | ![](picture-method/quantize-vote/03-coffee_36x48_blank.png) | 177 ms | recognizable |
+| 48x64 | ![](picture-method/quantize-vote/03-coffee_48x64_side_by_side.png) | ![](picture-method/quantize-vote/03-coffee_48x64_blank.png) | 535 ms | recognizable |
 
 ### 04 rocket (outdoor)
 
-| density | original | preview | blank grid | runtime | recognizability |
-|---|---|---|---|---|---|
-| 24x32 | ![](picture-method/quantize-vote/04-rocket_original.png) | ![](picture-method/quantize-vote/04-rocket_24x32_preview.png) | ![](picture-method/quantize-vote/04-rocket_24x32_blank.png) | 48 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.82); top 3 crayons fill 94% of cells (detail lost) |
-| 36x48 | ![](picture-method/quantize-vote/04-rocket_original.png) | ![](picture-method/quantize-vote/04-rocket_36x48_preview.png) | ![](picture-method/quantize-vote/04-rocket_36x48_blank.png) | 121 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.82); top 3 crayons fill 95% of cells (detail lost) |
-| 48x64 | ![](picture-method/quantize-vote/04-rocket_original.png) | ![](picture-method/quantize-vote/04-rocket_48x64_preview.png) | ![](picture-method/quantize-vote/04-rocket_48x64_blank.png) | 269 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.81); top 3 crayons fill 95% of cells (detail lost) |
+| density | original beside colored preview | blank grid | runtime | recognizability |
+|---|---|---|---|---|
+| 24x32 | ![](picture-method/quantize-vote/04-rocket_24x32_side_by_side.png) | ![](picture-method/quantize-vote/04-rocket_24x32_blank.png) | 73 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.82); top 3 crayons fill 94% of cells (detail lost) |
+| 36x48 | ![](picture-method/quantize-vote/04-rocket_36x48_side_by_side.png) | ![](picture-method/quantize-vote/04-rocket_36x48_blank.png) | 204 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.82); top 3 crayons fill 95% of cells (detail lost) |
+| 48x64 | ![](picture-method/quantize-vote/04-rocket_48x64_side_by_side.png) | ![](picture-method/quantize-vote/04-rocket_48x64_blank.png) | 279 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.81); top 3 crayons fill 95% of cells (detail lost) |
 
 ### 05 raccoon (pet or animal)
 
-| density | original | preview | blank grid | runtime | recognizability |
-|---|---|---|---|---|---|
-| 24x32 | ![](picture-method/quantize-vote/05-raccoon_original.png) | ![](picture-method/quantize-vote/05-raccoon_24x32_preview.png) | ![](picture-method/quantize-vote/05-raccoon_24x32_blank.png) | 71 ms | partly recognizable: only 5 crayons survive the vote; top 3 crayons fill 87% of cells (detail lost) |
-| 36x48 | ![](picture-method/quantize-vote/05-raccoon_original.png) | ![](picture-method/quantize-vote/05-raccoon_36x48_preview.png) | ![](picture-method/quantize-vote/05-raccoon_36x48_blank.png) | 141 ms | partly recognizable: top 3 crayons fill 87% of cells (detail lost) |
-| 48x64 | ![](picture-method/quantize-vote/05-raccoon_original.png) | ![](picture-method/quantize-vote/05-raccoon_48x64_preview.png) | ![](picture-method/quantize-vote/05-raccoon_48x64_blank.png) | 215 ms | partly recognizable: top 3 crayons fill 87% of cells (detail lost) |
+| density | original beside colored preview | blank grid | runtime | recognizability |
+|---|---|---|---|---|
+| 24x32 | ![](picture-method/quantize-vote/05-raccoon_24x32_side_by_side.png) | ![](picture-method/quantize-vote/05-raccoon_24x32_blank.png) | 68 ms | partly recognizable: only 5 crayons survive the vote; top 3 crayons fill 87% of cells (detail lost) |
+| 36x48 | ![](picture-method/quantize-vote/05-raccoon_36x48_side_by_side.png) | ![](picture-method/quantize-vote/05-raccoon_36x48_blank.png) | 197 ms | partly recognizable: top 3 crayons fill 87% of cells (detail lost) |
+| 48x64 | ![](picture-method/quantize-vote/05-raccoon_48x64_side_by_side.png) | ![](picture-method/quantize-vote/05-raccoon_48x64_blank.png) | 287 ms | partly recognizable: top 3 crayons fill 87% of cells (detail lost) |
 
 ### 06 mona-lisa (portrait)
 
-| density | original | preview | blank grid | runtime | recognizability |
-|---|---|---|---|---|---|
-| 24x32 | ![](picture-method/quantize-vote/06-mona-lisa_original.png) | ![](picture-method/quantize-vote/06-mona-lisa_24x32_preview.png) | ![](picture-method/quantize-vote/06-mona-lisa_24x32_blank.png) | 127 ms | partly recognizable: top 3 crayons fill 92% of cells (detail lost) |
-| 36x48 | ![](picture-method/quantize-vote/06-mona-lisa_original.png) | ![](picture-method/quantize-vote/06-mona-lisa_36x48_preview.png) | ![](picture-method/quantize-vote/06-mona-lisa_36x48_blank.png) | 197 ms | partly recognizable: top 3 crayons fill 91% of cells (detail lost) |
-| 48x64 | ![](picture-method/quantize-vote/06-mona-lisa_original.png) | ![](picture-method/quantize-vote/06-mona-lisa_48x64_preview.png) | ![](picture-method/quantize-vote/06-mona-lisa_48x64_blank.png) | 274 ms | partly recognizable: top 3 crayons fill 91% of cells (detail lost) |
+| density | original beside colored preview | blank grid | runtime | recognizability |
+|---|---|---|---|---|
+| 24x32 | ![](picture-method/quantize-vote/06-mona-lisa_24x32_side_by_side.png) | ![](picture-method/quantize-vote/06-mona-lisa_24x32_blank.png) | 302 ms | partly recognizable: top 3 crayons fill 92% of cells (detail lost) |
+| 36x48 | ![](picture-method/quantize-vote/06-mona-lisa_36x48_side_by_side.png) | ![](picture-method/quantize-vote/06-mona-lisa_36x48_blank.png) | 272 ms | partly recognizable: top 3 crayons fill 91% of cells (detail lost) |
+| 48x64 | ![](picture-method/quantize-vote/06-mona-lisa_48x64_side_by_side.png) | ![](picture-method/quantize-vote/06-mona-lisa_48x64_blank.png) | 432 ms | partly recognizable: top 3 crayons fill 91% of cells (detail lost) |
 
 ### 07 migrant-mother (group)
 
-| density | original | preview | blank grid | runtime | recognizability |
-|---|---|---|---|---|---|
-| 24x32 | ![](picture-method/quantize-vote/07-migrant-mother_original.png) | ![](picture-method/quantize-vote/07-migrant-mother_24x32_preview.png) | ![](picture-method/quantize-vote/07-migrant-mother_24x32_blank.png) | 119 ms | partly recognizable: only 3 crayons survive the vote; top 3 crayons fill 100% of cells (detail lost) |
-| 36x48 | ![](picture-method/quantize-vote/07-migrant-mother_original.png) | ![](picture-method/quantize-vote/07-migrant-mother_36x48_preview.png) | ![](picture-method/quantize-vote/07-migrant-mother_36x48_blank.png) | 177 ms | partly recognizable: only 3 crayons survive the vote; top 3 crayons fill 100% of cells (detail lost) |
-| 48x64 | ![](picture-method/quantize-vote/07-migrant-mother_original.png) | ![](picture-method/quantize-vote/07-migrant-mother_48x64_preview.png) | ![](picture-method/quantize-vote/07-migrant-mother_48x64_blank.png) | 275 ms | partly recognizable: only 3 crayons survive the vote; top 3 crayons fill 100% of cells (detail lost) |
+| density | original beside colored preview | blank grid | runtime | recognizability |
+|---|---|---|---|---|
+| 24x32 | ![](picture-method/quantize-vote/07-migrant-mother_24x32_side_by_side.png) | ![](picture-method/quantize-vote/07-migrant-mother_24x32_blank.png) | 190 ms | partly recognizable: only 3 crayons survive the vote; top 3 crayons fill 100% of cells (detail lost) |
+| 36x48 | ![](picture-method/quantize-vote/07-migrant-mother_36x48_side_by_side.png) | ![](picture-method/quantize-vote/07-migrant-mother_36x48_blank.png) | 350 ms | partly recognizable: only 3 crayons survive the vote; top 3 crayons fill 100% of cells (detail lost) |
+| 48x64 | ![](picture-method/quantize-vote/07-migrant-mother_48x64_side_by_side.png) | ![](picture-method/quantize-vote/07-migrant-mother_48x64_blank.png) | 456 ms | partly recognizable: only 3 crayons survive the vote; top 3 crayons fill 100% of cells (detail lost) |
 
 ### 08 lunch-atop-skyscraper (group)
 
-| density | original | preview | blank grid | runtime | recognizability |
-|---|---|---|---|---|---|
-| 24x32 | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_original.png) | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_24x32_preview.png) | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_24x32_blank.png) | 75 ms | partly recognizable: only 3 crayons survive the vote; top 3 crayons fill 100% of cells (detail lost) |
-| 36x48 | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_original.png) | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_36x48_preview.png) | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_36x48_blank.png) | 131 ms | partly recognizable: only 3 crayons survive the vote; top 3 crayons fill 100% of cells (detail lost) |
-| 48x64 | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_original.png) | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_48x64_preview.png) | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_48x64_blank.png) | 256 ms | partly recognizable: only 3 crayons survive the vote; top 3 crayons fill 100% of cells (detail lost) |
+| density | original beside colored preview | blank grid | runtime | recognizability |
+|---|---|---|---|---|
+| 24x32 | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_24x32_side_by_side.png) | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_24x32_blank.png) | 159 ms | partly recognizable: only 3 crayons survive the vote; top 3 crayons fill 100% of cells (detail lost) |
+| 36x48 | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_36x48_side_by_side.png) | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_36x48_blank.png) | 584 ms | partly recognizable: only 3 crayons survive the vote; top 3 crayons fill 100% of cells (detail lost) |
+| 48x64 | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_48x64_side_by_side.png) | ![](picture-method/quantize-vote/08-lunch-atop-skyscraper_48x64_blank.png) | 572 ms | partly recognizable: only 3 crayons survive the vote; top 3 crayons fill 100% of cells (detail lost) |
 
 ### 09 golden-retriever (pet or animal)
 
-| density | original | preview | blank grid | runtime | recognizability |
-|---|---|---|---|---|---|
-| 24x32 | ![](picture-method/quantize-vote/09-golden-retriever_original.png) | ![](picture-method/quantize-vote/09-golden-retriever_24x32_preview.png) | ![](picture-method/quantize-vote/09-golden-retriever_24x32_blank.png) | 49 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.84) |
-| 36x48 | ![](picture-method/quantize-vote/09-golden-retriever_original.png) | ![](picture-method/quantize-vote/09-golden-retriever_36x48_preview.png) | ![](picture-method/quantize-vote/09-golden-retriever_36x48_blank.png) | 107 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.85) |
-| 48x64 | ![](picture-method/quantize-vote/09-golden-retriever_original.png) | ![](picture-method/quantize-vote/09-golden-retriever_48x64_preview.png) | ![](picture-method/quantize-vote/09-golden-retriever_48x64_blank.png) | 194 ms | recognizable |
+| density | original beside colored preview | blank grid | runtime | recognizability |
+|---|---|---|---|---|
+| 24x32 | ![](picture-method/quantize-vote/09-golden-retriever_24x32_side_by_side.png) | ![](picture-method/quantize-vote/09-golden-retriever_24x32_blank.png) | 156 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.84) |
+| 36x48 | ![](picture-method/quantize-vote/09-golden-retriever_36x48_side_by_side.png) | ![](picture-method/quantize-vote/09-golden-retriever_36x48_blank.png) | 329 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.85) |
+| 48x64 | ![](picture-method/quantize-vote/09-golden-retriever_48x64_side_by_side.png) | ![](picture-method/quantize-vote/09-golden-retriever_48x64_blank.png) | 976 ms | recognizable |
 
 ### 10 hopetoun-falls (outdoor)
 
-| density | original | preview | blank grid | runtime | recognizability |
-|---|---|---|---|---|---|
-| 24x32 | ![](picture-method/quantize-vote/10-hopetoun-falls_original.png) | ![](picture-method/quantize-vote/10-hopetoun-falls_24x32_preview.png) | ![](picture-method/quantize-vote/10-hopetoun-falls_24x32_blank.png) | 74 ms | partly recognizable: only 5 crayons survive the vote; top 3 crayons fill 99% of cells (detail lost) |
-| 36x48 | ![](picture-method/quantize-vote/10-hopetoun-falls_original.png) | ![](picture-method/quantize-vote/10-hopetoun-falls_36x48_preview.png) | ![](picture-method/quantize-vote/10-hopetoun-falls_36x48_blank.png) | 123 ms | partly recognizable: top 3 crayons fill 99% of cells (detail lost) |
-| 48x64 | ![](picture-method/quantize-vote/10-hopetoun-falls_original.png) | ![](picture-method/quantize-vote/10-hopetoun-falls_48x64_preview.png) | ![](picture-method/quantize-vote/10-hopetoun-falls_48x64_blank.png) | 220 ms | partly recognizable: top 3 crayons fill 99% of cells (detail lost) |
+| density | original beside colored preview | blank grid | runtime | recognizability |
+|---|---|---|---|---|
+| 24x32 | ![](picture-method/quantize-vote/10-hopetoun-falls_24x32_side_by_side.png) | ![](picture-method/quantize-vote/10-hopetoun-falls_24x32_blank.png) | 542 ms | partly recognizable: only 5 crayons survive the vote; top 3 crayons fill 99% of cells (detail lost) |
+| 36x48 | ![](picture-method/quantize-vote/10-hopetoun-falls_36x48_side_by_side.png) | ![](picture-method/quantize-vote/10-hopetoun-falls_36x48_blank.png) | 585 ms | partly recognizable: top 3 crayons fill 99% of cells (detail lost) |
+| 48x64 | ![](picture-method/quantize-vote/10-hopetoun-falls_48x64_side_by_side.png) | ![](picture-method/quantize-vote/10-hopetoun-falls_48x64_blank.png) | 1136 ms | partly recognizable: top 3 crayons fill 99% of cells (detail lost) |
 
 ### 11 shibuya-crossing (cluttered)
 
-| density | original | preview | blank grid | runtime | recognizability |
-|---|---|---|---|---|---|
-| 24x32 | ![](picture-method/quantize-vote/11-shibuya-crossing_original.png) | ![](picture-method/quantize-vote/11-shibuya-crossing_24x32_preview.png) | ![](picture-method/quantize-vote/11-shibuya-crossing_24x32_blank.png) | 62 ms | not recognizable: light/dark structure only partly kept (lightness r=0.67); top 3 crayons fill 87% of cells (detail lost) |
-| 36x48 | ![](picture-method/quantize-vote/11-shibuya-crossing_original.png) | ![](picture-method/quantize-vote/11-shibuya-crossing_36x48_preview.png) | ![](picture-method/quantize-vote/11-shibuya-crossing_36x48_blank.png) | 121 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.70) |
-| 48x64 | ![](picture-method/quantize-vote/11-shibuya-crossing_original.png) | ![](picture-method/quantize-vote/11-shibuya-crossing_48x64_preview.png) | ![](picture-method/quantize-vote/11-shibuya-crossing_48x64_blank.png) | 226 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.72) |
+| density | original beside colored preview | blank grid | runtime | recognizability |
+|---|---|---|---|---|
+| 24x32 | ![](picture-method/quantize-vote/11-shibuya-crossing_24x32_side_by_side.png) | ![](picture-method/quantize-vote/11-shibuya-crossing_24x32_blank.png) | 172 ms | not recognizable: light/dark structure only partly kept (lightness r=0.67); top 3 crayons fill 87% of cells (detail lost) |
+| 36x48 | ![](picture-method/quantize-vote/11-shibuya-crossing_36x48_side_by_side.png) | ![](picture-method/quantize-vote/11-shibuya-crossing_36x48_blank.png) | 182 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.70) |
+| 48x64 | ![](picture-method/quantize-vote/11-shibuya-crossing_48x64_side_by_side.png) | ![](picture-method/quantize-vote/11-shibuya-crossing_48x64_blank.png) | 315 ms | partly recognizable: light/dark structure only partly kept (lightness r=0.72) |
 
 ## Contact sheets (all 11 images, pinned order, 4 per row)
 
@@ -228,6 +228,8 @@ Example sheets (first 10 rows of the first density; full sheets are the blank PN
 
 01 astronaut (24x32), blank PNG: `docs/picture-method/quantize-vote/01-astronaut_24x32_blank.png`
 
+![](picture-method/quantize-vote/01-astronaut_24x32_blank.png)
+
 ```
 15 15 15 15 15 15 15 14 14 15 15 14 14 14 14 14 14 14 14 14 15  4  8 15
 15 15 15 15 15 15 14 14 15 15 18 15 14 14 14 14 14 14 14 14 14  4  8 15
@@ -243,6 +245,8 @@ Example sheets (first 10 rows of the first density; full sheets are the blank PN
 
 02 chelsea-cat (24x32), blank PNG: `docs/picture-method/quantize-vote/02-chelsea-cat_24x32_blank.png`
 
+![](picture-method/quantize-vote/02-chelsea-cat_24x32_blank.png)
+
 ```
  4  4  4  4  4  4  4  4  4  4 15  4  8  4  8  4  4  4  4  4  4  4 15 15
  4  4  4  4  4  4  4  4  4  4 15  4  8  4  4  4  4  8  4  4  4  4  4 15
@@ -257,6 +261,8 @@ Example sheets (first 10 rows of the first density; full sheets are the blank PN
 ```
 
 03 coffee (24x32), blank PNG: `docs/picture-method/quantize-vote/03-coffee_24x32_blank.png`
+
+![](picture-method/quantize-vote/03-coffee_24x32_blank.png)
 
 ```
  4 24 24 24  4  4  4  4  4  4  4 24 24 24 24 24 24 24 24 24 24 24 24 24
@@ -286,18 +292,18 @@ Cells that needed the neighbor tie-break: 24x32 1.3%, 36x48 1.4%, 48x64 1.4%.
 
 | image | 24x32 | 36x48 | 48x64 |
 |---|---|---|---|
-| 01 astronaut | 61 | 104 | 196 |
-| 02 chelsea-cat | 45 | 110 | 185 |
-| 03 coffee | 44 | 102 | 190 |
-| 04 rocket | 48 | 121 | 269 |
-| 05 raccoon | 71 | 141 | 215 |
-| 06 mona-lisa | 127 | 197 | 274 |
-| 07 migrant-mother | 119 | 177 | 275 |
-| 08 lunch-atop-skyscraper | 75 | 131 | 256 |
-| 09 golden-retriever | 49 | 107 | 194 |
-| 10 hopetoun-falls | 74 | 123 | 220 |
-| 11 shibuya-crossing | 62 | 121 | 226 |
-| mean | 71 | 130 | 227 |
+| 01 astronaut | 101 | 288 | 549 |
+| 02 chelsea-cat | 71 | 243 | 540 |
+| 03 coffee | 94 | 177 | 535 |
+| 04 rocket | 73 | 204 | 279 |
+| 05 raccoon | 68 | 197 | 287 |
+| 06 mona-lisa | 302 | 272 | 432 |
+| 07 migrant-mother | 190 | 350 | 456 |
+| 08 lunch-atop-skyscraper | 159 | 584 | 572 |
+| 09 golden-retriever | 156 | 329 | 976 |
+| 10 hopetoun-falls | 542 | 585 | 1136 |
+| 11 shibuya-crossing | 172 | 182 | 315 |
+| mean | 175 | 310 | 552 |
 
 ## Dithering comparison (Floyd-Steinberg in Lab vs none)
 
@@ -309,21 +315,21 @@ Cells that needed the neighbor tie-break: 24x32 1.3%, 36x48 1.4%, 48x64 1.4%.
 | 24x32 | row run length | 3.96 | 3.88 |
 | 24x32 | adjacent same-number | 76.5% | 74.3% |
 | 24x32 | distinct crayons | 7.5 | 7.6 |
-| 24x32 | runtime s | 0.07 | 0.76 |
+| 24x32 | runtime s | 0.18 | 2.39 |
 | 36x48 | lightness r | 0.849 | 0.795 |
 | 36x48 | mean dE to original | 17.5 | 19.6 |
 | 36x48 | island share | 2.6% | 3.1% |
 | 36x48 | row run length | 4.56 | 4.44 |
 | 36x48 | adjacent same-number | 79.2% | 77.4% |
 | 36x48 | distinct crayons | 8.1 | 8.3 |
-| 36x48 | runtime s | 0.13 | 1.75 |
+| 36x48 | runtime s | 0.31 | 5.48 |
 | 48x64 | lightness r | 0.854 | 0.799 |
 | 48x64 | mean dE to original | 17.4 | 19.5 |
 | 48x64 | island share | 2.3% | 2.7% |
 | 48x64 | row run length | 5.06 | 5.02 |
 | 48x64 | adjacent same-number | 80.9% | 79.2% |
 | 48x64 | distinct crayons | 8.4 | 9.0 |
-| 48x64 | runtime s | 0.23 | 3.13 |
+| 48x64 | runtime s | 0.55 | 9.67 |
 
 - 24x32: dithering changes lightness r by -0.050 and island share by +1.1 points: hurts or is mixed (more speckle and/or lower correlation); the majority vote already averages tones within a cell.
 - 36x48: dithering changes lightness r by -0.054 and island share by +0.6 points: hurts or is mixed (more speckle and/or lower correlation); the majority vote already averages tones within a cell.
