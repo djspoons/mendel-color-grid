@@ -1,0 +1,6 @@
+version: 1
+service: app
+test_command: python -m unittest discover -s tests -v
+results_command: python scripts/survey_test_photos.py
+comparable_output: docs/test-photo-set-survey.md
+startup_timeout: 60

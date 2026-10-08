@@ -1,0 +1,12 @@
+{
+  "requirements": [
+    {
+      "kind": "secret",
+      "name": "SMITHSONIAN_API_KEY",
+      "description": "Free api.data.gov key for the Smithsonian Open Access API. Only lifts the shared DEMO_KEY rate limit for the survey's candidate counts.",
+      "console_url": "https://api.data.gov/signup/",
+      "optional": true,
+      "needed_by": ["results"]
+    }
+  ]
+}

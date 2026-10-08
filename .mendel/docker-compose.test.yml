@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: ..
+    command: ["sleep", "infinity"]
+    environment:
+      ENABLED_STUBS: ""
+    healthcheck:
+      test: ["CMD", "python", "-c", "print('ok')"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
