@@ -1,0 +1,5 @@
+version: 1
+service: app
+test_command: python -m unittest discover -s tests -v
+results_command: python -m picture_method
+comparable_output: docs/picture-method-results.md
