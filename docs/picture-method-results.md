@@ -1,6 +1,6 @@
 # Picture method results: edge-aware cell coloring
 
-Generated 2026-10-08 20:04 UTC (Python 3.12.15). Regenerate with `python -m picture_method`.
+Generated 2026-10-08 21:33 UTC (Python 3.12.15). Regenerate with `python -m picture_method`.
 
 ## What was read
 
@@ -68,187 +68,187 @@ Each comparison image shows the original (left) beside the colored preview (righ
 
 ### 01-astronaut
 
-**24x32** - edge rule on 154 of 768 cells, 36 islands smoothed, 77 ms; recognizable (proxy)
+**24x32** - edge rule on 154 of 768 cells, 36 islands smoothed, 122 ms; recognizable (proxy)
 
 ![01-astronaut 24x32 original | preview](picture-method/edge-aware/01-astronaut/compare-24x32.png)
 ![01-astronaut 24x32 blank grid](picture-method/edge-aware/01-astronaut/blank-24x32.png)
 
-**36x48** - edge rule on 346 of 1728 cells, 39 islands smoothed, 72 ms; recognizable (proxy)
+**36x48** - edge rule on 346 of 1728 cells, 39 islands smoothed, 124 ms; recognizable (proxy)
 
 ![01-astronaut 36x48 original | preview](picture-method/edge-aware/01-astronaut/compare-36x48.png)
 ![01-astronaut 36x48 blank grid](picture-method/edge-aware/01-astronaut/blank-36x48.png)
 
-**48x64** - edge rule on 615 of 3072 cells, 73 islands smoothed, 156 ms; recognizable (proxy)
+**48x64** - edge rule on 615 of 3072 cells, 73 islands smoothed, 225 ms; recognizable (proxy)
 
 ![01-astronaut 48x64 original | preview](picture-method/edge-aware/01-astronaut/compare-48x64.png)
 ![01-astronaut 48x64 blank grid](picture-method/edge-aware/01-astronaut/blank-48x64.png)
 
 ### 02-chelsea-cat
 
-**24x32** - edge rule on 154 of 768 cells, 17 islands smoothed, 34 ms; NOT recognizable (proxy): only 4 crayons used
+**24x32** - edge rule on 154 of 768 cells, 17 islands smoothed, 40 ms; NOT recognizable (proxy): only 4 crayons used
 
 ![02-chelsea-cat 24x32 original | preview](picture-method/edge-aware/02-chelsea-cat/compare-24x32.png)
 ![02-chelsea-cat 24x32 blank grid](picture-method/edge-aware/02-chelsea-cat/blank-24x32.png)
 
-**36x48** - edge rule on 346 of 1728 cells, 33 islands smoothed, 73 ms; recognizable (proxy)
+**36x48** - edge rule on 346 of 1728 cells, 33 islands smoothed, 102 ms; recognizable (proxy)
 
 ![02-chelsea-cat 36x48 original | preview](picture-method/edge-aware/02-chelsea-cat/compare-36x48.png)
 ![02-chelsea-cat 36x48 blank grid](picture-method/edge-aware/02-chelsea-cat/blank-36x48.png)
 
-**48x64** - edge rule on 615 of 3072 cells, 31 islands smoothed, 165 ms; recognizable (proxy)
+**48x64** - edge rule on 615 of 3072 cells, 31 islands smoothed, 377 ms; recognizable (proxy)
 
 ![02-chelsea-cat 48x64 original | preview](picture-method/edge-aware/02-chelsea-cat/compare-48x64.png)
 ![02-chelsea-cat 48x64 blank grid](picture-method/edge-aware/02-chelsea-cat/blank-48x64.png)
 
 ### 03-coffee
 
-**24x32** - edge rule on 154 of 768 cells, 25 islands smoothed, 33 ms; recognizable (proxy)
+**24x32** - edge rule on 154 of 768 cells, 25 islands smoothed, 52 ms; recognizable (proxy)
 
 ![03-coffee 24x32 original | preview](picture-method/edge-aware/03-coffee/compare-24x32.png)
 ![03-coffee 24x32 blank grid](picture-method/edge-aware/03-coffee/blank-24x32.png)
 
-**36x48** - edge rule on 346 of 1728 cells, 34 islands smoothed, 68 ms; recognizable (proxy)
+**36x48** - edge rule on 346 of 1728 cells, 34 islands smoothed, 123 ms; recognizable (proxy)
 
 ![03-coffee 36x48 original | preview](picture-method/edge-aware/03-coffee/compare-36x48.png)
 ![03-coffee 36x48 blank grid](picture-method/edge-aware/03-coffee/blank-36x48.png)
 
-**48x64** - edge rule on 615 of 3072 cells, 37 islands smoothed, 176 ms; recognizable (proxy)
+**48x64** - edge rule on 615 of 3072 cells, 37 islands smoothed, 715 ms; recognizable (proxy)
 
 ![03-coffee 48x64 original | preview](picture-method/edge-aware/03-coffee/compare-48x64.png)
 ![03-coffee 48x64 blank grid](picture-method/edge-aware/03-coffee/blank-48x64.png)
 
 ### 04-rocket
 
-**24x32** - edge rule on 154 of 768 cells, 0 islands smoothed, 32 ms; NOT recognizable (proxy): light/dark structure differs from the original (luminance SSIM 0.32 < 0.45)
+**24x32** - edge rule on 154 of 768 cells, 0 islands smoothed, 108 ms; NOT recognizable (proxy): light/dark structure differs from the original (luminance SSIM 0.32 < 0.45)
 
 ![04-rocket 24x32 original | preview](picture-method/edge-aware/04-rocket/compare-24x32.png)
 ![04-rocket 24x32 blank grid](picture-method/edge-aware/04-rocket/blank-24x32.png)
 
-**36x48** - edge rule on 346 of 1728 cells, 5 islands smoothed, 69 ms; NOT recognizable (proxy): light/dark structure differs from the original (luminance SSIM 0.30 < 0.45)
+**36x48** - edge rule on 346 of 1728 cells, 5 islands smoothed, 126 ms; NOT recognizable (proxy): light/dark structure differs from the original (luminance SSIM 0.30 < 0.45)
 
 ![04-rocket 36x48 original | preview](picture-method/edge-aware/04-rocket/compare-36x48.png)
 ![04-rocket 36x48 blank grid](picture-method/edge-aware/04-rocket/blank-36x48.png)
 
-**48x64** - edge rule on 615 of 3072 cells, 5 islands smoothed, 147 ms; NOT recognizable (proxy): light/dark structure differs from the original (luminance SSIM 0.29 < 0.45)
+**48x64** - edge rule on 615 of 3072 cells, 5 islands smoothed, 389 ms; NOT recognizable (proxy): light/dark structure differs from the original (luminance SSIM 0.29 < 0.45)
 
 ![04-rocket 48x64 original | preview](picture-method/edge-aware/04-rocket/compare-48x64.png)
 ![04-rocket 48x64 blank grid](picture-method/edge-aware/04-rocket/blank-48x64.png)
 
 ### 05-raccoon
 
-**24x32** - edge rule on 154 of 768 cells, 6 islands smoothed, 38 ms; NOT recognizable (proxy): only 4 crayons used
+**24x32** - edge rule on 154 of 768 cells, 6 islands smoothed, 58 ms; NOT recognizable (proxy): only 4 crayons used
 
 ![05-raccoon 24x32 original | preview](picture-method/edge-aware/05-raccoon/compare-24x32.png)
 ![05-raccoon 24x32 blank grid](picture-method/edge-aware/05-raccoon/blank-24x32.png)
 
-**36x48** - edge rule on 346 of 1728 cells, 17 islands smoothed, 75 ms; recognizable (proxy)
+**36x48** - edge rule on 346 of 1728 cells, 17 islands smoothed, 104 ms; recognizable (proxy)
 
 ![05-raccoon 36x48 original | preview](picture-method/edge-aware/05-raccoon/compare-36x48.png)
 ![05-raccoon 36x48 blank grid](picture-method/edge-aware/05-raccoon/blank-36x48.png)
 
-**48x64** - edge rule on 615 of 3072 cells, 37 islands smoothed, 157 ms; recognizable (proxy)
+**48x64** - edge rule on 615 of 3072 cells, 37 islands smoothed, 319 ms; recognizable (proxy)
 
 ![05-raccoon 48x64 original | preview](picture-method/edge-aware/05-raccoon/compare-48x64.png)
 ![05-raccoon 48x64 blank grid](picture-method/edge-aware/05-raccoon/blank-48x64.png)
 
 ### 06-mona-lisa
 
-**24x32** - edge rule on 154 of 768 cells, 11 islands smoothed, 108 ms; recognizable (proxy)
+**24x32** - edge rule on 154 of 768 cells, 11 islands smoothed, 236 ms; recognizable (proxy)
 
 ![06-mona-lisa 24x32 original | preview](picture-method/edge-aware/06-mona-lisa/compare-24x32.png)
 ![06-mona-lisa 24x32 blank grid](picture-method/edge-aware/06-mona-lisa/blank-24x32.png)
 
-**36x48** - edge rule on 346 of 1728 cells, 16 islands smoothed, 176 ms; recognizable (proxy)
+**36x48** - edge rule on 346 of 1728 cells, 16 islands smoothed, 759 ms; recognizable (proxy)
 
 ![06-mona-lisa 36x48 original | preview](picture-method/edge-aware/06-mona-lisa/compare-36x48.png)
 ![06-mona-lisa 36x48 blank grid](picture-method/edge-aware/06-mona-lisa/blank-36x48.png)
 
-**48x64** - edge rule on 615 of 3072 cells, 18 islands smoothed, 265 ms; recognizable (proxy)
+**48x64** - edge rule on 615 of 3072 cells, 18 islands smoothed, 1954 ms; recognizable (proxy)
 
 ![06-mona-lisa 48x64 original | preview](picture-method/edge-aware/06-mona-lisa/compare-48x64.png)
 ![06-mona-lisa 48x64 blank grid](picture-method/edge-aware/06-mona-lisa/blank-48x64.png)
 
 ### 07-migrant-mother
 
-**24x32** - edge rule on 154 of 768 cells, 4 islands smoothed, 104 ms; NOT recognizable (proxy): only 3 crayons used
+**24x32** - edge rule on 154 of 768 cells, 4 islands smoothed, 302 ms; NOT recognizable (proxy): only 3 crayons used
 
 ![07-migrant-mother 24x32 original | preview](picture-method/edge-aware/07-migrant-mother/compare-24x32.png)
 ![07-migrant-mother 24x32 blank grid](picture-method/edge-aware/07-migrant-mother/blank-24x32.png)
 
-**36x48** - edge rule on 346 of 1728 cells, 10 islands smoothed, 157 ms; NOT recognizable (proxy): only 3 crayons used
+**36x48** - edge rule on 346 of 1728 cells, 10 islands smoothed, 419 ms; NOT recognizable (proxy): only 3 crayons used
 
 ![07-migrant-mother 36x48 original | preview](picture-method/edge-aware/07-migrant-mother/compare-36x48.png)
 ![07-migrant-mother 36x48 blank grid](picture-method/edge-aware/07-migrant-mother/blank-36x48.png)
 
-**48x64** - edge rule on 615 of 3072 cells, 7 islands smoothed, 216 ms; NOT recognizable (proxy): only 3 crayons used
+**48x64** - edge rule on 615 of 3072 cells, 7 islands smoothed, 582 ms; NOT recognizable (proxy): only 3 crayons used
 
 ![07-migrant-mother 48x64 original | preview](picture-method/edge-aware/07-migrant-mother/compare-48x64.png)
 ![07-migrant-mother 48x64 blank grid](picture-method/edge-aware/07-migrant-mother/blank-48x64.png)
 
 ### 08-lunch-atop-skyscraper
 
-**24x32** - edge rule on 154 of 768 cells, 13 islands smoothed, 59 ms; NOT recognizable (proxy): light/dark structure differs from the original (luminance SSIM 0.45 < 0.45); only 3 crayons used
+**24x32** - edge rule on 154 of 768 cells, 13 islands smoothed, 104 ms; NOT recognizable (proxy): light/dark structure differs from the original (luminance SSIM 0.45 < 0.45); only 3 crayons used
 
 ![08-lunch-atop-skyscraper 24x32 original | preview](picture-method/edge-aware/08-lunch-atop-skyscraper/compare-24x32.png)
 ![08-lunch-atop-skyscraper 24x32 blank grid](picture-method/edge-aware/08-lunch-atop-skyscraper/blank-24x32.png)
 
-**36x48** - edge rule on 346 of 1728 cells, 18 islands smoothed, 110 ms; NOT recognizable (proxy): only 3 crayons used
+**36x48** - edge rule on 346 of 1728 cells, 18 islands smoothed, 215 ms; NOT recognizable (proxy): only 3 crayons used
 
 ![08-lunch-atop-skyscraper 36x48 original | preview](picture-method/edge-aware/08-lunch-atop-skyscraper/compare-36x48.png)
 ![08-lunch-atop-skyscraper 36x48 blank grid](picture-method/edge-aware/08-lunch-atop-skyscraper/blank-36x48.png)
 
-**48x64** - edge rule on 615 of 3072 cells, 23 islands smoothed, 187 ms; NOT recognizable (proxy): only 3 crayons used
+**48x64** - edge rule on 615 of 3072 cells, 23 islands smoothed, 334 ms; NOT recognizable (proxy): only 3 crayons used
 
 ![08-lunch-atop-skyscraper 48x64 original | preview](picture-method/edge-aware/08-lunch-atop-skyscraper/compare-48x64.png)
 ![08-lunch-atop-skyscraper 48x64 blank grid](picture-method/edge-aware/08-lunch-atop-skyscraper/blank-48x64.png)
 
 ### 09-golden-retriever
 
-**24x32** - edge rule on 154 of 768 cells, 11 islands smoothed, 39 ms; recognizable (proxy)
+**24x32** - edge rule on 154 of 768 cells, 11 islands smoothed, 96 ms; recognizable (proxy)
 
 ![09-golden-retriever 24x32 original | preview](picture-method/edge-aware/09-golden-retriever/compare-24x32.png)
 ![09-golden-retriever 24x32 blank grid](picture-method/edge-aware/09-golden-retriever/blank-24x32.png)
 
-**36x48** - edge rule on 346 of 1728 cells, 24 islands smoothed, 109 ms; recognizable (proxy)
+**36x48** - edge rule on 346 of 1728 cells, 24 islands smoothed, 169 ms; recognizable (proxy)
 
 ![09-golden-retriever 36x48 original | preview](picture-method/edge-aware/09-golden-retriever/compare-36x48.png)
 ![09-golden-retriever 36x48 blank grid](picture-method/edge-aware/09-golden-retriever/blank-36x48.png)
 
-**48x64** - edge rule on 615 of 3072 cells, 47 islands smoothed, 156 ms; recognizable (proxy)
+**48x64** - edge rule on 615 of 3072 cells, 47 islands smoothed, 394 ms; recognizable (proxy)
 
 ![09-golden-retriever 48x64 original | preview](picture-method/edge-aware/09-golden-retriever/compare-48x64.png)
 ![09-golden-retriever 48x64 blank grid](picture-method/edge-aware/09-golden-retriever/blank-48x64.png)
 
 ### 10-hopetoun-falls
 
-**24x32** - edge rule on 154 of 768 cells, 1 islands smoothed, 55 ms; recognizable (proxy)
+**24x32** - edge rule on 154 of 768 cells, 1 islands smoothed, 101 ms; recognizable (proxy)
 
 ![10-hopetoun-falls 24x32 original | preview](picture-method/edge-aware/10-hopetoun-falls/compare-24x32.png)
 ![10-hopetoun-falls 24x32 blank grid](picture-method/edge-aware/10-hopetoun-falls/blank-24x32.png)
 
-**36x48** - edge rule on 346 of 1728 cells, 12 islands smoothed, 110 ms; recognizable (proxy)
+**36x48** - edge rule on 346 of 1728 cells, 12 islands smoothed, 193 ms; recognizable (proxy)
 
 ![10-hopetoun-falls 36x48 original | preview](picture-method/edge-aware/10-hopetoun-falls/compare-36x48.png)
 ![10-hopetoun-falls 36x48 blank grid](picture-method/edge-aware/10-hopetoun-falls/blank-36x48.png)
 
-**48x64** - edge rule on 615 of 3072 cells, 14 islands smoothed, 172 ms; recognizable (proxy)
+**48x64** - edge rule on 615 of 3072 cells, 14 islands smoothed, 390 ms; recognizable (proxy)
 
 ![10-hopetoun-falls 48x64 original | preview](picture-method/edge-aware/10-hopetoun-falls/compare-48x64.png)
 ![10-hopetoun-falls 48x64 blank grid](picture-method/edge-aware/10-hopetoun-falls/blank-48x64.png)
 
 ### 11-shibuya-crossing
 
-**24x32** - edge rule on 154 of 768 cells, 36 islands smoothed, 94 ms; recognizable (proxy)
+**24x32** - edge rule on 154 of 768 cells, 36 islands smoothed, 97 ms; recognizable (proxy)
 
 ![11-shibuya-crossing 24x32 original | preview](picture-method/edge-aware/11-shibuya-crossing/compare-24x32.png)
 ![11-shibuya-crossing 24x32 blank grid](picture-method/edge-aware/11-shibuya-crossing/blank-24x32.png)
 
-**36x48** - edge rule on 346 of 1728 cells, 61 islands smoothed, 104 ms; recognizable (proxy)
+**36x48** - edge rule on 346 of 1728 cells, 61 islands smoothed, 273 ms; recognizable (proxy)
 
 ![11-shibuya-crossing 36x48 original | preview](picture-method/edge-aware/11-shibuya-crossing/compare-36x48.png)
 ![11-shibuya-crossing 36x48 blank grid](picture-method/edge-aware/11-shibuya-crossing/blank-36x48.png)
 
-**48x64** - edge rule on 615 of 3072 cells, 96 islands smoothed, 202 ms; recognizable (proxy)
+**48x64** - edge rule on 615 of 3072 cells, 96 islands smoothed, 441 ms; recognizable (proxy)
 
 ![11-shibuya-crossing 48x64 original | preview](picture-method/edge-aware/11-shibuya-crossing/compare-48x64.png)
 ![11-shibuya-crossing 48x64 blank grid](picture-method/edge-aware/11-shibuya-crossing/blank-48x64.png)
@@ -423,17 +423,17 @@ Island = a cell with no 4-neighbour of the same crayon. Run length = average len
 
 | image | 24x32 | 36x48 | 48x64 |
 |---|---|---|---|
-| 01-astronaut | 0.08 | 0.07 | 0.16 |
-| 02-chelsea-cat | 0.03 | 0.07 | 0.16 |
-| 03-coffee | 0.03 | 0.07 | 0.18 |
-| 04-rocket | 0.03 | 0.07 | 0.15 |
-| 05-raccoon | 0.04 | 0.07 | 0.16 |
-| 06-mona-lisa | 0.11 | 0.18 | 0.26 |
-| 07-migrant-mother | 0.10 | 0.16 | 0.22 |
-| 08-lunch-atop-skyscraper | 0.06 | 0.11 | 0.19 |
-| 09-golden-retriever | 0.04 | 0.11 | 0.16 |
-| 10-hopetoun-falls | 0.05 | 0.11 | 0.17 |
-| 11-shibuya-crossing | 0.09 | 0.10 | 0.20 |
+| 01-astronaut | 0.12 | 0.12 | 0.22 |
+| 02-chelsea-cat | 0.04 | 0.10 | 0.38 |
+| 03-coffee | 0.05 | 0.12 | 0.72 |
+| 04-rocket | 0.11 | 0.13 | 0.39 |
+| 05-raccoon | 0.06 | 0.10 | 0.32 |
+| 06-mona-lisa | 0.24 | 0.76 | 1.95 |
+| 07-migrant-mother | 0.30 | 0.42 | 0.58 |
+| 08-lunch-atop-skyscraper | 0.10 | 0.22 | 0.33 |
+| 09-golden-retriever | 0.10 | 0.17 | 0.39 |
+| 10-hopetoun-falls | 0.10 | 0.19 | 0.39 |
+| 11-shibuya-crossing | 0.10 | 0.27 | 0.44 |
 
 ## Verdict
 
