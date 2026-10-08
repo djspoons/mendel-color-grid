@@ -1,16 +1,13 @@
 # Picture method results: average-then-snap
 
-Generated 2026-10-08 20:01 UTC by `python run_picture_method.py`.
+Generated 2026-10-08 21:38 UTC by `python run_picture_method.py`.
 Method: average each cell's pixels, then snap that average to the nearest of the 24 Crayola crayons in CIE Lab.
-
-## Run notes
-
-- Every image was read and no fallback was taken.
-- Contrast/saturation boost: on (contrast x1.10, saturation x1.15).
 
 ## What was read
 
 - Images read: 11 of 11 expected.
+- Every image was read and no fallback was taken.
+- Contrast/saturation boost: on (contrast x1.10, saturation x1.15).
 - Densities (columns x rows): 24x32, 36x48, 48x64.
 - Palette: the classic Crayola 24-count box; hex values below are the ones this run used. Cell numbers are the 1-24 positions in this list.
 
@@ -410,47 +407,47 @@ Median of 3 runs of boost + cell averaging + Lab snapping on the already-cropped
 
 | density | avg ms per image |
 |---|---|
-| 24x32 | 90.5 |
-| 36x48 | 85.9 |
-| 48x64 | 93.1 |
+| 24x32 | 163.7 |
+| 36x48 | 168.6 |
+| 48x64 | 156.3 |
 
 Per image:
 
 | image | density | ms |
 |---|---|---|
-| 01-astronaut | 24x32 | 9.2 |
-| 01-astronaut | 36x48 | 12.9 |
-| 01-astronaut | 48x64 | 15.2 |
-| 02-chelsea-cat | 24x32 | 8.8 |
-| 02-chelsea-cat | 36x48 | 7.8 |
-| 02-chelsea-cat | 48x64 | 11.0 |
-| 03-coffee | 24x32 | 6.4 |
-| 03-coffee | 36x48 | 8.2 |
-| 03-coffee | 48x64 | 15.9 |
-| 04-rocket | 24x32 | 6.8 |
-| 04-rocket | 36x48 | 10.1 |
-| 04-rocket | 48x64 | 15.7 |
-| 05-raccoon | 24x32 | 19.9 |
-| 05-raccoon | 36x48 | 22.3 |
-| 05-raccoon | 48x64 | 33.0 |
-| 06-mona-lisa | 24x32 | 422.3 |
-| 06-mona-lisa | 36x48 | 373.2 |
-| 06-mona-lisa | 48x64 | 406.8 |
-| 07-migrant-mother | 24x32 | 346.8 |
-| 07-migrant-mother | 36x48 | 332.2 |
-| 07-migrant-mother | 48x64 | 337.6 |
-| 08-lunch-atop-skyscraper | 24x32 | 64.8 |
-| 08-lunch-atop-skyscraper | 36x48 | 66.1 |
-| 08-lunch-atop-skyscraper | 48x64 | 68.1 |
-| 09-golden-retriever | 24x32 | 18.3 |
-| 09-golden-retriever | 36x48 | 18.8 |
-| 09-golden-retriever | 48x64 | 21.3 |
-| 10-hopetoun-falls | 24x32 | 49.2 |
-| 10-hopetoun-falls | 36x48 | 43.8 |
-| 10-hopetoun-falls | 48x64 | 53.5 |
-| 11-shibuya-crossing | 24x32 | 42.8 |
-| 11-shibuya-crossing | 36x48 | 49.5 |
-| 11-shibuya-crossing | 48x64 | 46.2 |
+| 01-astronaut | 24x32 | 30.0 |
+| 01-astronaut | 36x48 | 27.0 |
+| 01-astronaut | 48x64 | 31.7 |
+| 02-chelsea-cat | 24x32 | 11.4 |
+| 02-chelsea-cat | 36x48 | 12.3 |
+| 02-chelsea-cat | 48x64 | 16.6 |
+| 03-coffee | 24x32 | 14.1 |
+| 03-coffee | 36x48 | 18.1 |
+| 03-coffee | 48x64 | 19.4 |
+| 04-rocket | 24x32 | 16.5 |
+| 04-rocket | 36x48 | 49.7 |
+| 04-rocket | 48x64 | 21.9 |
+| 05-raccoon | 24x32 | 37.7 |
+| 05-raccoon | 36x48 | 35.9 |
+| 05-raccoon | 48x64 | 52.3 |
+| 06-mona-lisa | 24x32 | 851.7 |
+| 06-mona-lisa | 36x48 | 562.3 |
+| 06-mona-lisa | 48x64 | 519.6 |
+| 07-migrant-mother | 24x32 | 455.6 |
+| 07-migrant-mother | 36x48 | 734.1 |
+| 07-migrant-mother | 48x64 | 584.4 |
+| 08-lunch-atop-skyscraper | 24x32 | 102.9 |
+| 08-lunch-atop-skyscraper | 36x48 | 136.8 |
+| 08-lunch-atop-skyscraper | 48x64 | 165.7 |
+| 09-golden-retriever | 24x32 | 24.6 |
+| 09-golden-retriever | 36x48 | 42.8 |
+| 09-golden-retriever | 48x64 | 56.6 |
+| 10-hopetoun-falls | 24x32 | 107.5 |
+| 10-hopetoun-falls | 36x48 | 129.9 |
+| 10-hopetoun-falls | 48x64 | 112.2 |
+| 11-shibuya-crossing | 24x32 | 148.4 |
+| 11-shibuya-crossing | 36x48 | 105.7 |
+| 11-shibuya-crossing | 48x64 | 139.2 |
 
 ## Verdict
 
