@@ -40,9 +40,11 @@ def process_image(item, cropped, density, files_dir):
         "original": os.path.join(files_dir, f"{item.spec.number:02d}-{item.spec.name}_original.png"),
         "preview": os.path.join(files_dir, f"{tag}_preview.png"),
         "blank": os.path.join(files_dir, f"{tag}_blank.png"),
+        "side_by_side": os.path.join(files_dir, f"{tag}_side_by_side.png"),
     }
     files["blank_rel"] = files["blank"]
     preview.save(files["preview"])
+    render.side_by_side(cropped, preview).save(files["side_by_side"])
     blank.save(files["blank"])
 
     plain_m = metrics.grid_metrics(plain)

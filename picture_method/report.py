@@ -60,16 +60,16 @@ def section_inputs(sources, densities, method_dir, params):
 
 
 def section_per_image(records, method_dir, rel):
-    out = ["## Per image and density", "", "Original (3:4 crop), colored preview, blank numbered grid. Recognizability is a computed proxy (see next section).", ""]
+    out = ["## Per image and density", "", "Original (3:4 crop) beside the colored preview (standalone preview PNGs sit in the same folder), and the blank numbered grid. Recognizability is a computed proxy (see next section).", ""]
     numbers = sorted({r["item"].spec.number for r in records})
     for n in numbers:
         recs = [r for r in records if r["item"].spec.number == n]
         item = recs[0]["item"]
-        out += [f"### {item.spec.number:02d} {item.spec.name} ({item.spec.category})", "", "| density | original | preview | blank grid | runtime | recognizability |", "|---|---|---|---|---|---|"]
+        out += [f"### {item.spec.number:02d} {item.spec.name} ({item.spec.category})", "", "| density | original beside colored preview | blank grid | runtime | recognizability |", "|---|---|---|---|---|"]
         for r in recs:
             f = r["files"]
             out.append(
-                f"| {_density(r['density'])} | ![]({rel(f['original'])}) | ![]({rel(f['preview'])}) | ![]({rel(f['blank'])}) | "
+                f"| {_density(r['density'])} | ![]({rel(f['side_by_side'])}) | ![]({rel(f['blank'])}) | "
                 f"{r['plain']['seconds'] * 1000:.0f} ms | {r['recog'][0]}" + (f": {'; '.join(r['recog'][1])}" if r["recog"][1] else "") + " |"
             )
         out.append("")
@@ -127,7 +127,7 @@ def _excerpt(grid, rows=10):
     return "\n".join(" ".join(f"{int(v) + 1:2d}" for v in row) for row in grid[:rows])
 
 
-def section_privacy(records, densities, blank_checks, examples):
+def section_privacy(records, densities, blank_checks, examples, rel):
     out = ["## Blank-sheet privacy", ""]
     for d in densities:
         ok, total = blank_checks[d]
@@ -140,7 +140,7 @@ def section_privacy(records, densities, blank_checks, examples):
     out += ["", "Can the subject be guessed from the numbers alone? Not tested by a person or model here. What is measured: the numbers form large same-number regions (ratio above), so shapes and light/dark layout are readable in the digits for anyone who looks for them; the digits do not name colors, so material, identity and color are not given away.", ""]
     out.append("Example sheets (first 10 rows of the first density; full sheets are the blank PNGs):")
     for r in examples:
-        out += ["", f"{r['item'].spec.number:02d} {r['item'].spec.name} ({_density(r['density'])}), blank PNG: `{r['files']['blank_rel']}`", "", "```", _excerpt(r["plain"]["grid"]), "```"]
+        out += ["", f"{r['item'].spec.number:02d} {r['item'].spec.name} ({_density(r['density'])}), blank PNG: `{r['files']['blank_rel']}`", "", f"![]({rel(r['files']['blank'])})", "", "```", _excerpt(r["plain"]["grid"]), "```"]
     return out + [""]
 
 
@@ -202,7 +202,7 @@ def build_report(sources, records, densities, method_dir, params, sheet_files, b
         section_sheets(densities, sheet_files, rel),
         section_recognizability(records, densities),
         section_palette_usage(records, densities),
-        section_privacy(records, densities, blank_checks, examples),
+        section_privacy(records, densities, blank_checks, examples, rel),
         section_practicality(records, densities),
         section_runtime(records, densities),
         section_dither(records, densities),

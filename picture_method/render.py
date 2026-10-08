@@ -49,6 +49,18 @@ def render_original(img, size):
     return img.resize(size, Image.LANCZOS)
 
 
+def side_by_side(original, preview, height=480, gap=12):
+    """Original (left) beside the colored preview (right), both scaled to the same height."""
+    parts = [
+        original.resize((round(original.width * height / original.height), height), Image.LANCZOS),
+        preview.resize((round(preview.width * height / preview.height), height), Image.NEAREST),
+    ]
+    sheet = Image.new("RGB", (sum(i.width for i in parts) + gap, height), (255, 255, 255))
+    sheet.paste(parts[0], (0, 0))
+    sheet.paste(parts[1], (parts[0].width + gap, 0))
+    return sheet
+
+
 def contact_sheet(entries, size=SHEET_THUMB, columns=4, pad=8, label_h=18):
     """entries: [(label, PIL image or None)] in pinned order; None draws a MISSING tile."""
     n = len(entries)
